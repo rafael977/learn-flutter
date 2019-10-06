@@ -3,14 +3,12 @@ import 'package:flutter/material.dart';
 void main() => runApp(
       MaterialApp(
         home: Scaffold(
+          backgroundColor: Colors.red,
           appBar: AppBar(
             backgroundColor: Colors.red,
-            title: Text('Dicess'),
+            title: Text('Dicee'),
           ),
-          body: Container(
-            color: Colors.red,
-            child: DiceePage(),
-          ),
+          body: DiceePage(),
         ),
       ),
     );
@@ -23,6 +21,23 @@ class DiceePage extends StatefulWidget {
 class _DiceePageState extends State<DiceePage> {
   @override
   Widget build(BuildContext context) {
-    return null;
+    return Center(
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: FlatButton(
+              child: Image.asset('images/dice1.png'),
+              onPressed: null,
+            ),
+          ),
+          Expanded(
+            child: FlatButton(
+              child: Image.asset('images/dice2.png'),
+              onPressed: null,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
